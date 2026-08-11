@@ -1,0 +1,233 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Aug 10 17:38:52 2026
+| Host         : DESKTOP-6IVTPM3 running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file E:/eth/udp_add_eth/V3/util_hier.rpt
+| Design       : impedance_control_top
+| Device       : 7z100ffg900-2
+| Design State : Physopt postRoute
+--------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------------------------------------+-------------------------------------+------------+------------+---------+------+-------+--------+--------+--------------+
+|                      Instance                      |                Module               | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | DSP48 Blocks |
++----------------------------------------------------+-------------------------------------+------------+------------+---------+------+-------+--------+--------+--------------+
+| impedance_control_top                              |                               (top) |      28575 |      28112 |     384 |   79 | 27949 |     15 |     20 |          666 |
+|   (impedance_control_top)                          |                               (top) |         70 |         70 |       0 |    0 |    18 |      0 |      2 |            0 |
+|   clk_wiz_0_inst                                   |                           clk_wiz_0 |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|     inst                                           |          clk_wiz_0clk_wiz_0_clk_wiz |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|   eth_top_inst                                     |                             eth_top |       2574 |       2117 |     384 |   73 |  3431 |      3 |      6 |            0 |
+|     arp_inst                                       |                                 arp |        391 |        353 |       0 |   38 |  1018 |      1 |      1 |            0 |
+|       arp_ctrl_inst                                |                            arp_ctrl |        264 |        226 |       0 |   38 |   601 |      1 |      1 |            0 |
+|         (arp_ctrl_inst)                            |                            arp_ctrl |         98 |         98 |       0 |    0 |   287 |      0 |      0 |            0 |
+|         arp_cache_inst                             |                           arp_cache |        167 |        129 |       0 |   38 |   314 |      1 |      1 |            0 |
+|           (arp_cache_inst)                         |                           arp_cache |        119 |         85 |       0 |   34 |   226 |      1 |      1 |            0 |
+|           DJBHash_inst_r                           |                             DJBHash |         14 |         14 |       0 |    0 |    24 |      0 |      0 |            0 |
+|           DJBHash_inst_w                           |                          DJBHash_71 |         34 |         30 |       0 |    4 |    64 |      0 |      0 |            0 |
+|       arp_rx_inst                                  |                              arp_rx |         46 |         46 |       0 |    0 |   139 |      0 |      0 |            0 |
+|       arp_tx_inst                                  |                              arp_tx |         81 |         81 |       0 |    0 |   278 |      0 |      0 |            0 |
+|     eth_ctrl_inst                                  |                            eth_ctrl |         83 |         82 |       0 |    1 |    95 |      0 |      0 |            0 |
+|       eth_rx_ctrl_inst                             |                         eth_rx_ctrl |          4 |          3 |       0 |    1 |    24 |      0 |      0 |            0 |
+|       eth_tx_ctrl_inst                             |                         eth_tx_ctrl |         79 |         79 |       0 |    0 |    71 |      0 |      0 |            0 |
+|         (eth_tx_ctrl_inst)                         |                         eth_tx_ctrl |         76 |         76 |       0 |    0 |    69 |      0 |      0 |            0 |
+|         arbiter_rr_inst                            |                       arbiter_rr_70 |          3 |          3 |       0 |    0 |     2 |      0 |      0 |            0 |
+|           (arbiter_rr_inst)                        |                       arbiter_rr_70 |          2 |          2 |       0 |    0 |     2 |      0 |      0 |            0 |
+|           arbiter_base_inst                        |                        arbiter_base |          1 |          1 |       0 |    0 |     0 |      0 |      0 |            0 |
+|     eth_mac_inst                                   |                             eth_mac |        478 |        454 |       0 |   24 |   593 |      0 |      2 |            0 |
+|       eth_mac_rx_inst                              |                          eth_mac_rx |         64 |         60 |       0 |    4 |    81 |      0 |      0 |            0 |
+|       eth_mac_tx_ctrl_inst                         |                     eth_mac_tx_ctrl |        414 |        394 |       0 |   20 |   512 |      0 |      2 |            0 |
+|         (eth_mac_tx_ctrl_inst)                     |                     eth_mac_tx_ctrl |          0 |          0 |       0 |    0 |     2 |      0 |      0 |            0 |
+|         eth_mac_tx_pang                            |                          eth_mac_tx |        206 |        196 |       0 |   10 |   248 |      0 |      1 |            0 |
+|           (eth_mac_tx_pang)                        |                          eth_mac_tx |        121 |        111 |       0 |   10 |   216 |      0 |      0 |            0 |
+|           crc_inst                                 |                              crc_68 |         58 |         58 |       0 |    0 |    32 |      0 |      0 |            0 |
+|           tpram_inst                               |            tpram__parameterized0_69 |         29 |         29 |       0 |    0 |     0 |      0 |      1 |            0 |
+|         eth_mac_tx_ping                            |                       eth_mac_tx_67 |        208 |        198 |       0 |   10 |   262 |      0 |      1 |            0 |
+|           (eth_mac_tx_ping)                        |                       eth_mac_tx_67 |        113 |        103 |       0 |   10 |   230 |      0 |      0 |            0 |
+|           crc_inst                                 |                                 crc |         70 |         70 |       0 |    0 |    32 |      0 |      0 |            0 |
+|           tpram_inst                               |               tpram__parameterized0 |         27 |         27 |       0 |    0 |     0 |      0 |      1 |            0 |
+|     gmii_axis_inst                                 |                           gmii_axis |        859 |        475 |     384 |    0 |   629 |      2 |      3 |            0 |
+|       gmii_axis_rx_inst                            |                        gmii_axis_rx |        129 |        129 |       0 |    0 |   303 |      2 |      0 |            0 |
+|         (gmii_axis_rx_inst)                        |                        gmii_axis_rx |          7 |          7 |       0 |    0 |    20 |      0 |      0 |            0 |
+|         xpm_fifo_axis_inst                         |                       xpm_fifo_axis |        123 |        123 |       0 |    0 |   283 |      2 |      0 |            0 |
+|           (xpm_fifo_axis_inst)                     |                       xpm_fifo_axis |         22 |         22 |       0 |    0 |    37 |      0 |      0 |            0 |
+|           gaxis_pkt_fifo_ic.af_axis_cdc_inst       |                      xpm_cdc_single |          0 |          0 |       0 |    0 |     2 |      0 |      0 |            0 |
+|           gaxis_pkt_fifo_ic.wpkt_cnt_cdc_inst      |                        xpm_cdc_gray |         17 |         17 |       0 |    0 |    48 |      0 |      0 |            0 |
+|           gaxis_rst_sync.xpm_cdc_sync_rst_inst     |                    xpm_cdc_sync_rst |          0 |          0 |       0 |    0 |     2 |      0 |      0 |            0 |
+|           xpm_fifo_base_inst                       |                       xpm_fifo_base |         84 |         84 |       0 |    0 |   194 |      2 |      0 |            0 |
+|             (xpm_fifo_base_inst)                   |                       xpm_fifo_base |          4 |          4 |       0 |    0 |     8 |      0 |      0 |            0 |
+|             gaf_wptr_p3.wrpp3_inst                 |                    xpm_counter_updn |          0 |          0 |       0 |    0 |    12 |      0 |      0 |            0 |
+|             gen_cdc_pntr.rd_pntr_cdc_inst          |        xpm_cdc_gray__parameterized0 |         17 |         17 |       0 |    0 |    36 |      0 |      0 |            0 |
+|             gen_cdc_pntr.rpw_gray_reg              |                    xpm_fifo_reg_vec |         14 |         14 |       0 |    0 |    12 |      0 |      0 |            0 |
+|             gen_cdc_pntr.wpr_gray_reg              |                 xpm_fifo_reg_vec_62 |          9 |          9 |       0 |    0 |    12 |      0 |      0 |            0 |
+|             gen_cdc_pntr.wr_pntr_cdc_inst          |     xpm_cdc_gray__parameterized0__2 |         17 |         17 |       0 |    0 |    36 |      0 |      0 |            0 |
+|             gen_sdpram.xpm_memory_base_inst        |                     xpm_memory_base |          0 |          0 |       0 |    0 |     0 |      2 |      0 |            0 |
+|             rdp_inst                               |    xpm_counter_updn__parameterized2 |          2 |          2 |       0 |    0 |    12 |      0 |      0 |            0 |
+|             rdpp1_inst                             |    xpm_counter_updn__parameterized3 |          1 |          1 |       0 |    0 |    12 |      0 |      0 |            0 |
+|             rst_d1_inst                            |                 xpm_fifo_reg_bit_64 |          5 |          5 |       0 |    0 |     1 |      0 |      0 |            0 |
+|             wrp_inst                               | xpm_counter_updn__parameterized2_65 |          0 |          0 |       0 |    0 |    12 |      0 |      0 |            0 |
+|             wrpp1_inst                             | xpm_counter_updn__parameterized3_66 |          0 |          0 |       0 |    0 |    12 |      0 |      0 |            0 |
+|             wrpp2_inst                             |    xpm_counter_updn__parameterized0 |          0 |          0 |       0 |    0 |    12 |      0 |      0 |            0 |
+|             xpm_fifo_rst_inst                      |             xpm_fifo_rst__xdcDup__1 |         17 |         17 |       0 |    0 |    17 |      0 |      0 |            0 |
+|               (xpm_fifo_rst_inst)                  |             xpm_fifo_rst__xdcDup__1 |         17 |         17 |       0 |    0 |    13 |      0 |      0 |            0 |
+|               gen_rst_ic.rrst_wr_inst              |                 xpm_cdc_sync_rst__8 |          0 |          0 |       0 |    0 |     2 |      0 |      0 |            0 |
+|               gen_rst_ic.wrst_rd_inst              |                 xpm_cdc_sync_rst__7 |          0 |          0 |       0 |    0 |     2 |      0 |      0 |            0 |
+|       gmii_axis_tx_inst                            |                        gmii_axis_tx |        730 |        346 |     384 |    0 |   326 |      0 |      3 |            0 |
+|         (gmii_axis_tx_inst)                        |                        gmii_axis_tx |          7 |          7 |       0 |    0 |    22 |      0 |      0 |            0 |
+|         gmii_axis_tx_mem_pang                      |                    gmii_axis_tx_mem |         37 |         37 |       0 |    0 |    47 |      0 |      1 |            0 |
+|           (gmii_axis_tx_mem_pang)                  |                    gmii_axis_tx_mem |         33 |         33 |       0 |    0 |    47 |      0 |      0 |            0 |
+|           tpram_inst                               |                            tpram_58 |          5 |          5 |       0 |    0 |     0 |      0 |      1 |            0 |
+|         gmii_axis_tx_mem_ping                      |                 gmii_axis_tx_mem_57 |         30 |         30 |       0 |    0 |    47 |      0 |      1 |            0 |
+|           (gmii_axis_tx_mem_ping)                  |                 gmii_axis_tx_mem_57 |         26 |         26 |       0 |    0 |    47 |      0 |      0 |            0 |
+|           tpram_inst                               |                               tpram |          5 |          5 |       0 |    0 |     0 |      0 |      1 |            0 |
+|         stream_fifo_inst                           |                         stream_fifo |        558 |        174 |     384 |    0 |    70 |      0 |      0 |            0 |
+|           (stream_fifo_inst)                       |                         stream_fifo |        460 |         76 |     384 |    0 |    50 |      0 |      0 |            0 |
+|           stream_pipe_inst                         |                         stream_pipe |         98 |         98 |       0 |    0 |    20 |      0 |      0 |            0 |
+|         xpm_fifo_async_inst                        |                      xpm_fifo_async |         99 |         99 |       0 |    0 |   140 |      0 |      1 |            0 |
+|           gnuram_async_fifo.xpm_fifo_base_inst     |       xpm_fifo_base__parameterized0 |         99 |         99 |       0 |    0 |   140 |      0 |      1 |            0 |
+|             (gnuram_async_fifo.xpm_fifo_base_inst) |       xpm_fifo_base__parameterized0 |          2 |          2 |       0 |    0 |     5 |      0 |      0 |            0 |
+|             gen_cdc_pntr.rd_pntr_cdc_inst          |        xpm_cdc_gray__parameterized3 |         12 |         12 |       0 |    0 |    27 |      0 |      0 |            0 |
+|             gen_cdc_pntr.rpw_gray_reg              |    xpm_fifo_reg_vec__parameterized1 |          6 |          6 |       0 |    0 |     9 |      0 |      0 |            0 |
+|             gen_cdc_pntr.wpr_gray_reg              | xpm_fifo_reg_vec__parameterized1_59 |          7 |          7 |       0 |    0 |     9 |      0 |      0 |            0 |
+|             gen_cdc_pntr.wr_pntr_cdc_inst          |     xpm_cdc_gray__parameterized3__1 |         12 |         12 |       0 |    0 |    27 |      0 |      0 |            0 |
+|             gen_sdpram.xpm_memory_base_inst        |     xpm_memory_base__parameterized0 |          1 |          1 |       0 |    0 |     0 |      0 |      1 |            0 |
+|             rdp_inst                               |    xpm_counter_updn__parameterized4 |          9 |          9 |       0 |    0 |     9 |      0 |      0 |            0 |
+|             rdpp1_inst                             |    xpm_counter_updn__parameterized5 |          9 |          9 |       0 |    0 |     9 |      0 |      0 |            0 |
+|             rst_d1_inst                            |                    xpm_fifo_reg_bit |          1 |          1 |       0 |    0 |     1 |      0 |      0 |            0 |
+|             wrp_inst                               | xpm_counter_updn__parameterized4_60 |          8 |          8 |       0 |    0 |     9 |      0 |      0 |            0 |
+|             wrpp1_inst                             | xpm_counter_updn__parameterized5_61 |          8 |          8 |       0 |    0 |     9 |      0 |      0 |            0 |
+|             wrpp2_inst                             |    xpm_counter_updn__parameterized6 |          8 |          8 |       0 |    0 |     9 |      0 |      0 |            0 |
+|             xpm_fifo_rst_inst                      |                        xpm_fifo_rst |         16 |         16 |       0 |    0 |    17 |      0 |      0 |            0 |
+|               (xpm_fifo_rst_inst)                  |                        xpm_fifo_rst |         16 |         16 |       0 |    0 |    13 |      0 |      0 |            0 |
+|               gen_rst_ic.rrst_wr_inst              |                 xpm_cdc_sync_rst__6 |          0 |          0 |       0 |    0 |     2 |      0 |      0 |            0 |
+|               gen_rst_ic.wrst_rd_inst              |                 xpm_cdc_sync_rst__5 |          0 |          0 |       0 |    0 |     2 |      0 |      0 |            0 |
+|     ip_inst                                        |                                  ip |        766 |        756 |       0 |   10 |  1096 |      0 |      0 |            0 |
+|       (ip_inst)                                    |                                  ip |          2 |          2 |       0 |    0 |    11 |      0 |      0 |            0 |
+|       ip_rx_inst                                   |                               ip_rx |         21 |         21 |       0 |    0 |    83 |      0 |      0 |            0 |
+|       ip_tx_inst                                   |                               ip_tx |        289 |        279 |       0 |   10 |   376 |      0 |      0 |            0 |
+|         (ip_tx_inst)                               |                               ip_tx |        287 |        277 |       0 |   10 |   374 |      0 |      0 |            0 |
+|         arbiter_rr_inst                            |                          arbiter_rr |          3 |          3 |       0 |    0 |     2 |      0 |      0 |            0 |
+|       udp_inst                                     |                                 udp |        454 |        454 |       0 |    0 |   626 |      0 |      0 |            0 |
+|         udp_rx_inst                                |                              udp_rx |         32 |         32 |       0 |    0 |    54 |      0 |      0 |            0 |
+|         udp_tx_ctrl_inst                           |                         udp_tx_ctrl |         12 |         12 |       0 |    0 |     2 |      0 |      0 |            0 |
+|         udp_tx_pang                                |                              udp_tx |        214 |        214 |       0 |    0 |   285 |      0 |      0 |            0 |
+|         udp_tx_ping                                |                           udp_tx_56 |        202 |        202 |       0 |    0 |   285 |      0 |      0 |            0 |
+|     rgmii_phy_inst                                 |                           rgmii_phy |          1 |          1 |       0 |    0 |     0 |      0 |      0 |            0 |
+|       rgmii_rx_inst                                |                            rgmii_rx |          1 |          1 |       0 |    0 |     0 |      0 |      0 |            0 |
+|         (rgmii_rx_inst)                            |                            rgmii_rx |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|         iddr_inst                                  |                                iddr |          1 |          1 |       0 |    0 |     0 |      0 |      0 |            0 |
+|       rgmii_tx_inst                                |                            rgmii_tx |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|         oddr_inst                                  |                                oddr |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|   foc_inst                                         |                           foc_array |       9594 |       9588 |       0 |    6 |  7068 |     12 |     12 |          132 |
+|     (foc_inst)                                     |                           foc_array |        288 |        288 |       0 |    0 |     0 |      0 |      0 |            0 |
+|     ch0                                            |                         foc_channel |       1582 |       1581 |       0 |    1 |  1178 |      2 |      2 |           22 |
+|       (ch0)                                        |                         foc_channel |          0 |          0 |       0 |    0 |    34 |      0 |      0 |            0 |
+|       foc_inst                                     |                          foc_top_47 |       1582 |       1581 |       0 |    1 |  1144 |      2 |      2 |           22 |
+|         (foc_inst)                                 |                          foc_top_47 |        464 |        464 |       0 |    0 |   118 |      0 |      0 |            0 |
+|         u_adc_sn_ctrl                              |                      hold_detect_48 |         28 |         28 |       0 |    0 |    19 |      0 |      0 |            0 |
+|         u_cartesian2polar                          |                  cartesian2polar_49 |        268 |        268 |       0 |    0 |   201 |      2 |      0 |            1 |
+|         u_clark_tr                                 |                         clark_tr_50 |         40 |         40 |       0 |    0 |   137 |      0 |      0 |            0 |
+|         u_id_pi                                    |                    pi_controller_51 |        304 |        304 |       0 |    0 |   183 |      0 |      0 |            8 |
+|         u_iq_pi                                    |                    pi_controller_52 |        312 |        312 |       0 |    0 |   177 |      0 |      0 |            8 |
+|         u_park_tr                                  |                          park_tr_53 |        156 |        156 |       0 |    0 |   126 |      0 |      1 |            4 |
+|           (u_park_tr)                              |                          park_tr_53 |         44 |         44 |       0 |    0 |    34 |      0 |      0 |            4 |
+|           u_sincos                                 |                           sincos_55 |        112 |        112 |       0 |    0 |    92 |      0 |      1 |            0 |
+|         u_svpwm                                    |                            svpwm_54 |        130 |        129 |       0 |    1 |   183 |      0 |      1 |            1 |
+|     ch1                                            |                       foc_channel_5 |       1582 |       1581 |       0 |    1 |  1178 |      2 |      2 |           22 |
+|       (ch1)                                        |                       foc_channel_5 |          0 |          0 |       0 |    0 |    34 |      0 |      0 |            0 |
+|       foc_inst                                     |                          foc_top_38 |       1582 |       1581 |       0 |    1 |  1144 |      2 |      2 |           22 |
+|         (foc_inst)                                 |                          foc_top_38 |        464 |        464 |       0 |    0 |   118 |      0 |      0 |            0 |
+|         u_adc_sn_ctrl                              |                      hold_detect_39 |         28 |         28 |       0 |    0 |    19 |      0 |      0 |            0 |
+|         u_cartesian2polar                          |                  cartesian2polar_40 |        268 |        268 |       0 |    0 |   201 |      2 |      0 |            1 |
+|         u_clark_tr                                 |                         clark_tr_41 |         40 |         40 |       0 |    0 |   137 |      0 |      0 |            0 |
+|         u_id_pi                                    |                    pi_controller_42 |        304 |        304 |       0 |    0 |   183 |      0 |      0 |            8 |
+|         u_iq_pi                                    |                    pi_controller_43 |        312 |        312 |       0 |    0 |   177 |      0 |      0 |            8 |
+|         u_park_tr                                  |                          park_tr_44 |        157 |        157 |       0 |    0 |   126 |      0 |      1 |            4 |
+|           (u_park_tr)                              |                          park_tr_44 |         44 |         44 |       0 |    0 |    34 |      0 |      0 |            4 |
+|           u_sincos                                 |                           sincos_46 |        113 |        113 |       0 |    0 |    92 |      0 |      1 |            0 |
+|         u_svpwm                                    |                            svpwm_45 |        129 |        128 |       0 |    1 |   183 |      0 |      1 |            1 |
+|     ch2                                            |                       foc_channel_6 |       1582 |       1581 |       0 |    1 |  1178 |      2 |      2 |           22 |
+|       (ch2)                                        |                       foc_channel_6 |          0 |          0 |       0 |    0 |    34 |      0 |      0 |            0 |
+|       foc_inst                                     |                          foc_top_29 |       1582 |       1581 |       0 |    1 |  1144 |      2 |      2 |           22 |
+|         (foc_inst)                                 |                          foc_top_29 |        464 |        464 |       0 |    0 |   118 |      0 |      0 |            0 |
+|         u_adc_sn_ctrl                              |                      hold_detect_30 |         28 |         28 |       0 |    0 |    19 |      0 |      0 |            0 |
+|         u_cartesian2polar                          |                  cartesian2polar_31 |        268 |        268 |       0 |    0 |   201 |      2 |      0 |            1 |
+|         u_clark_tr                                 |                         clark_tr_32 |         39 |         39 |       0 |    0 |   137 |      0 |      0 |            0 |
+|         u_id_pi                                    |                    pi_controller_33 |        304 |        304 |       0 |    0 |   183 |      0 |      0 |            8 |
+|         u_iq_pi                                    |                    pi_controller_34 |        312 |        312 |       0 |    0 |   177 |      0 |      0 |            8 |
+|         u_park_tr                                  |                          park_tr_35 |        157 |        157 |       0 |    0 |   126 |      0 |      1 |            4 |
+|           (u_park_tr)                              |                          park_tr_35 |         44 |         44 |       0 |    0 |    34 |      0 |      0 |            4 |
+|           u_sincos                                 |                           sincos_37 |        113 |        113 |       0 |    0 |    92 |      0 |      1 |            0 |
+|         u_svpwm                                    |                            svpwm_36 |        130 |        129 |       0 |    1 |   183 |      0 |      1 |            1 |
+|     ch3                                            |                       foc_channel_7 |       1582 |       1581 |       0 |    1 |  1178 |      2 |      2 |           22 |
+|       (ch3)                                        |                       foc_channel_7 |          0 |          0 |       0 |    0 |    34 |      0 |      0 |            0 |
+|       foc_inst                                     |                          foc_top_20 |       1582 |       1581 |       0 |    1 |  1144 |      2 |      2 |           22 |
+|         (foc_inst)                                 |                          foc_top_20 |        464 |        464 |       0 |    0 |   118 |      0 |      0 |            0 |
+|         u_adc_sn_ctrl                              |                      hold_detect_21 |         28 |         28 |       0 |    0 |    19 |      0 |      0 |            0 |
+|         u_cartesian2polar                          |                  cartesian2polar_22 |        268 |        268 |       0 |    0 |   201 |      2 |      0 |            1 |
+|         u_clark_tr                                 |                         clark_tr_23 |         40 |         40 |       0 |    0 |   137 |      0 |      0 |            0 |
+|         u_id_pi                                    |                    pi_controller_24 |        304 |        304 |       0 |    0 |   183 |      0 |      0 |            8 |
+|         u_iq_pi                                    |                    pi_controller_25 |        312 |        312 |       0 |    0 |   177 |      0 |      0 |            8 |
+|         u_park_tr                                  |                          park_tr_26 |        157 |        157 |       0 |    0 |   126 |      0 |      1 |            4 |
+|           (u_park_tr)                              |                          park_tr_26 |         44 |         44 |       0 |    0 |    34 |      0 |      0 |            4 |
+|           u_sincos                                 |                           sincos_28 |        113 |        113 |       0 |    0 |    92 |      0 |      1 |            0 |
+|         u_svpwm                                    |                            svpwm_27 |        129 |        128 |       0 |    1 |   183 |      0 |      1 |            1 |
+|     ch4                                            |                       foc_channel_8 |       1581 |       1580 |       0 |    1 |  1178 |      2 |      2 |           22 |
+|       (ch4)                                        |                       foc_channel_8 |          0 |          0 |       0 |    0 |    34 |      0 |      0 |            0 |
+|       foc_inst                                     |                          foc_top_11 |       1581 |       1580 |       0 |    1 |  1144 |      2 |      2 |           22 |
+|         (foc_inst)                                 |                          foc_top_11 |        464 |        464 |       0 |    0 |   118 |      0 |      0 |            0 |
+|         u_adc_sn_ctrl                              |                      hold_detect_12 |         28 |         28 |       0 |    0 |    19 |      0 |      0 |            0 |
+|         u_cartesian2polar                          |                  cartesian2polar_13 |        268 |        268 |       0 |    0 |   201 |      2 |      0 |            1 |
+|         u_clark_tr                                 |                         clark_tr_14 |         40 |         40 |       0 |    0 |   137 |      0 |      0 |            0 |
+|         u_id_pi                                    |                    pi_controller_15 |        304 |        304 |       0 |    0 |   183 |      0 |      0 |            8 |
+|         u_iq_pi                                    |                    pi_controller_16 |        312 |        312 |       0 |    0 |   177 |      0 |      0 |            8 |
+|         u_park_tr                                  |                          park_tr_17 |        156 |        156 |       0 |    0 |   126 |      0 |      1 |            4 |
+|           (u_park_tr)                              |                          park_tr_17 |         44 |         44 |       0 |    0 |    34 |      0 |      0 |            4 |
+|           u_sincos                                 |                           sincos_19 |        112 |        112 |       0 |    0 |    92 |      0 |      1 |            0 |
+|         u_svpwm                                    |                            svpwm_18 |        129 |        128 |       0 |    1 |   183 |      0 |      1 |            1 |
+|     ch5                                            |                       foc_channel_9 |       1583 |       1582 |       0 |    1 |  1178 |      2 |      2 |           22 |
+|       (ch5)                                        |                       foc_channel_9 |          0 |          0 |       0 |    0 |    34 |      0 |      0 |            0 |
+|       foc_inst                                     |                             foc_top |       1583 |       1582 |       0 |    1 |  1144 |      2 |      2 |           22 |
+|         (foc_inst)                                 |                             foc_top |        465 |        465 |       0 |    0 |   118 |      0 |      0 |            0 |
+|         u_adc_sn_ctrl                              |                         hold_detect |         28 |         28 |       0 |    0 |    19 |      0 |      0 |            0 |
+|         u_cartesian2polar                          |                     cartesian2polar |        268 |        268 |       0 |    0 |   201 |      2 |      0 |            1 |
+|         u_clark_tr                                 |                            clark_tr |         40 |         40 |       0 |    0 |   137 |      0 |      0 |            0 |
+|         u_id_pi                                    |                       pi_controller |        304 |        304 |       0 |    0 |   183 |      0 |      0 |            8 |
+|         u_iq_pi                                    |                    pi_controller_10 |        312 |        312 |       0 |    0 |   177 |      0 |      0 |            8 |
+|         u_park_tr                                  |                             park_tr |        157 |        157 |       0 |    0 |   126 |      0 |      1 |            4 |
+|           (u_park_tr)                              |                             park_tr |         44 |         44 |       0 |    0 |    34 |      0 |      0 |            4 |
+|           u_sincos                                 |                              sincos |        113 |        113 |       0 |    0 |    92 |      0 |      1 |            0 |
+|         u_svpwm                                    |                               svpwm |        129 |        128 |       0 |    1 |   183 |      0 |      1 |            1 |
+|   udp_fk_cmd_inst                                  |                          udp_fk_cmd |      16373 |      16373 |       0 |    0 | 17432 |      0 |      0 |          534 |
+|     (udp_fk_cmd_inst)                              |                          udp_fk_cmd |       1620 |       1620 |       0 |    0 |  4899 |      0 |      0 |            6 |
+|     adapt_inst                                     |               adaptive_impedance_v2 |       6903 |       6903 |       0 |    0 |  5009 |      0 |      0 |          192 |
+|       (adapt_inst)                                 |               adaptive_impedance_v2 |       4877 |       4877 |       0 |    0 |  4078 |      0 |      0 |          192 |
+|       g_div[0].u_div                               |                          pipe_div32 |        341 |        341 |       0 |    0 |   156 |      0 |      0 |            0 |
+|       g_div[1].u_div                               |                        pipe_div32_0 |        338 |        338 |       0 |    0 |   155 |      0 |      0 |            0 |
+|       g_div[2].u_div                               |                        pipe_div32_1 |        337 |        337 |       0 |    0 |   155 |      0 |      0 |            0 |
+|       g_div[3].u_div                               |                        pipe_div32_2 |        337 |        337 |       0 |    0 |   155 |      0 |      0 |            0 |
+|       g_div[4].u_div                               |                        pipe_div32_3 |        337 |        337 |       0 |    0 |   155 |      0 |      0 |            0 |
+|       g_div[5].u_div                               |                        pipe_div32_4 |        336 |        336 |       0 |    0 |   155 |      0 |      0 |            0 |
+|     imp_inst                                       |                      cart_impedance |       2489 |       2489 |       0 |    0 |  1359 |      0 |      0 |           52 |
+|       (imp_inst)                                   |                      cart_impedance |          3 |          3 |       0 |    0 |   197 |      0 |      0 |            0 |
+|       it                                           |                    impedance_torque |        720 |        720 |       0 |    0 |   389 |      0 |      0 |            4 |
+|       wc                                           |                         wrench_calc |       1766 |       1766 |       0 |    0 |   773 |      0 |      0 |           48 |
+|     jac_inst                                       |          analytical_jacobian_serial |       5122 |       5122 |       0 |    0 |  6059 |      0 |      0 |          272 |
+|       (jac_inst)                                   |          analytical_jacobian_serial |        308 |        308 |       0 |    0 |  1332 |      0 |      0 |           24 |
+|       fk_inst                                      |                           fk_engine |       4814 |       4814 |       0 |    0 |  4727 |      0 |      0 |          248 |
+|         (fk_inst)                                  |                           fk_engine |       3739 |       3739 |       0 |    0 |  4383 |      0 |      0 |          248 |
+|         atan2_inst                                 |                        cordic_atan2 |        579 |        579 |       0 |    0 |   171 |      0 |      0 |            0 |
+|         cordic_inst                                |                       cordic_sincos |        496 |        496 |       0 |    0 |   173 |      0 |      0 |            0 |
+|     tiq_inst                                       |                        torque_to_iq |        241 |        241 |       0 |    0 |   106 |      0 |      0 |           12 |
++----------------------------------------------------+-------------------------------------+------------+------------+---------+------+-------+--------+--------+--------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

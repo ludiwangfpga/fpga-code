@@ -1,0 +1,46 @@
+Board-test console log, captured 2026-08-10
+===========================================
+Carrier : Zynq-7100 (xc7z100ffg900-2) flashed with board_test/bitstream/top_udp_add.bit
+Host    : board_test/host/pcie_cpp.sln (Visual Studio, toolset v143, x64), Parts 1-5
+Link    : direct wired UDP, FPGA 172.28.109.173:8081 <-> host 172.28.109.174:8080
+
+The excerpts below are the summary and VERDICT lines as captured during the runs.
+Every part is reproducible by rebuilding board_test/host/ and running it against
+the flashed bitstream (fresh load; Part 5 assumes adaptive state at reset priors).
+
+
+=== Part 1: FK precision sweep (32 joint vectors, op2 write q / op8 read pose) ===
+---- sweep summary: mean = 0.0303 mm   max = 0.0583 mm (case 18) ----
+VERDICT: ROUND-TO-NEAREST RTL (new bit) -- FK precision upgraded, R1.2 margin restored.
+
+
+=== Part 2: full-chain demo (op10/op11/op12/op14/op13 liveness) ===
+pose      : to be pasted by the author
+tau (Nm)  : to be pasted by the author
+iq  (ref) : to be pasted by the author
+PWM duty  : to be pasted by the author
+==== full chain OK ====
+(Note: the four numeric lines above were not archived verbatim from the
+2026-08-10 console; they are to be pasted by the author from the run. The
+liveness verdict line "==== full chain OK ====" is the captured result.)
+
+
+=== Part 3: E2 determinism sweep (1e5 on-board forward chains, op18) ===
+op18 before: last=549 min=549 max=549 runs=1 magic=0xE2E2E2E2
+op18 after : last=549 min=549 max=549 runs=100000 magic=0xE2E2E2E2
+summary    : chains sent=100000  both-ACK ok=99999  runs delta=99999  min=549  max=549
+VERDICT: DETERMINISM CONFIRMED -- zero spread over 1e5 on-board executions.
+
+
+=== Part 4: force-chain bit-exact sweep (32 cases, op11 tau / op12 iq) ===
+---- Part 4 summary: 32/32 exact ----
+VERDICT: FORCE-CHAIN BIT-EXACT ON BOARD -- Table VI carrier upgraded.
+
+
+=== Part 5: R2.1 on-board -- adaptive_en 0/1 cycle equality ===
+phase A (adaptive_en=0): chains=20000 ok=20000 op18 min=549 max=549 runs+=20000
+tauA vs expected: MATCH
+op15 enable=1 ACK ok; op17 vs expected: MATCH  -> adaptation ACTIVE
+phase B (adaptive_en=1): chains=20000 ok=19999 op18 min=549 max=549 runs+=20000
+tauB vs expected: MATCH ; tauB != tauA: CONFIRMED
+VERDICT: R2.1 ON-BOARD -- forward-chain cycles invariant to adaptive_en (549/549), adaptation active.

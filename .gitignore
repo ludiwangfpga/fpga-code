@@ -1,0 +1,76 @@
+# ---------------------------------------------------------------------------
+# Vivado / xsim build products.  Everything the build scripts write lands in the
+# repository root (they are single-process, non-project flows), so most of the
+# rules below are root-anchored on purpose.
+# ---------------------------------------------------------------------------
+
+# Vivado project directory created by scripts/create_project.tcl
+/vivado/
+
+# Vivado + xsim scratch
+.Xil/
+xsim.dir/
+*.jou
+*.pb
+*.wdb
+*.str
+*.log
+usage_statistics_webtalk.*
+webtalk*.jou
+webtalk*.log
+
+# Checkpoints and bitstreams are build products.  The one bitstream of record is
+# committed on purpose (board_test/bitstream/), so it is re-allowed below.
+*.dcp
+*.bit
+!board_test/bitstream/top_udp_add.bit
+
+# Reports regenerated at the repository root by run_impl.tcl / report_util.tcl.
+# The copies of record live in board_test/bitstream/.
+/timing_summary.rpt
+/util_flat.rpt
+/util_hier.rpt
+
+# RTL dump regenerated at the repository root by scripts/run_fk_ab.bat.
+# The archived dump of record lives in board_test/data/fk_ab_out.txt.
+/fk_ab_out.txt
+
+# Expectation files regenerated in the working directory by sim/tb_force_board.v
+# and sim/tb_r21_board.v.  The copies of record live in sim/.
+/force_board_expected.txt
+/r21_board_expected.txt
+
+# CSVs written by tools/e6_rtt.py into the current directory
+/e6_rtt_op8.csv
+/e6_cycle.csv
+
+# Plot/analysis output of tools/traj_hw/traj_analyze.py
+selftest_out/
+*.png
+*.pdf
+
+# ---------------------------------------------------------------------------
+# Visual Studio build products (board_test/host/)
+# ---------------------------------------------------------------------------
+.vs/
+x64/
+Win32/
+Debug/
+Release/
+*.obj
+*.ilk
+*.pdb
+*.idb
+*.iobj
+*.ipdb
+*.exe
+*.recipe
+*.tlog
+*.user
+*.suo
+
+# ---------------------------------------------------------------------------
+# Misc
+# ---------------------------------------------------------------------------
+__pycache__/
+*.pyc
