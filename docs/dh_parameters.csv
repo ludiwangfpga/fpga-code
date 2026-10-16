@@ -1,0 +1,7 @@
+joint,joint_type,d_m,a_m,alpha_rad,theta_offset_rad,motor_frame,gear_ratio,driver
+1,revolute,0.166,0.055,pi/2,not printed in paper,"NEMA-17, L48",25:1,own CAN driver board
+2,revolute,0,0.200,0,not printed in paper,"NEMA-17, L60",20:1,own CAN driver board
+3,revolute,0,0.056,pi/2,not printed in paper,"NEMA-17, L34",25:1,own CAN driver board
+4,revolute,0.192,0,-pi/2,not printed in paper,"NEMA-17, L34",10:1,own CAN driver board
+5,revolute,0,0,pi/2,not printed in paper,"NEMA-17, L40",direct drive,own CAN driver board
+6,revolute,0.055,0,0,not printed in paper,"NEMA-17, L40",direct drive,own CAN driver board

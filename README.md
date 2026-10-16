@@ -64,6 +64,9 @@ Two properties the design is built around:
 | `board_test/host/` | Visual Studio host program that performs the on-board verification (Parts 1-5). |
 | `board_test/data/` | Data produced by the tests: RTL dump, board console log, measured robot trajectory. See `board_test/data/README.md`. |
 | `benchmarks/cpu_longrun/` | CPU baseline: per-call latency of the bit-level-equivalent control law on a Windows host (two 10^6-call runs and three long runs of 60–120 min), with source, raw data and analysis script. See `benchmarks/cpu_longrun/README.md`. |
+| `simulation/serial_vs_bypass/` | RTL simulation of the serial-versus-bypass comparison: testbenches and wrapper that compile the deployed RTL unchanged, xsim run script, per-beat CSVs and analysis script. See `simulation/serial_vs_bypass/README.md`. |
+| `board_test/photos/` | Photos of the contact-experiment setup and motion sequence (source images of the paper's Fig. 6), metadata stripped. See `board_test/photos/README.md`. |
+| `docs/` | Arm design parameters copied from the paper: D-H table, mechanical dimensions, joint actuation (`arm_parameters.md`, `dh_parameters.csv`). |
 
 `board_test/` deliberately keeps the three things you need for a hardware run
 side by side: the bitstream you flash, the host you build, and the data those
@@ -291,6 +294,9 @@ carrying a number.
 | `board_test/data/trajectory_measured_100Hz_60s.csv` | Host-in-the-loop run on the physical arm, 6001 rows at 100 Hz over 60 s | **Physical robot measurement.** |
 | `tools/traj_hw/traj_xdes_delta.csv` | `tools/traj_hw/gen_traj.py` | Deterministic generated command table (the reference the measured log is compared against). |
 | `benchmarks/cpu_longrun/data/` | `benchmarks/cpu_longrun/src/` on an i9-10900 / Windows 10 host, timed per call with `rdtscp` | **Host measurement.** Raw per-call samples (10^6-call runs) plus full histograms and per-event tails (long runs). |
+| `simulation/serial_vs_bypass/data/` | xsim on the deployed `adaptive_impedance_v2`, a serial/bypass wrapper of the deployed modules, and the real `udp_fk_cmd` with its op18 counter; 2000 updates / 1000 beats each, fixed seeds | RTL simulation. Reproduces byte for byte via `simulation\serial_vs_bypass\run_r24.bat`. Not a board measurement. |
+| `board_test/photos/*.jpg` | Camera photos of the contact-maintenance experiment (sponge and rigid plate) | Photo. Setup and motion sequence only; no measured value is taken from them. |
+| `docs/arm_parameters.md`, `docs/dh_parameters.csv` | Copied from the paper's Fig. 3, Table 2 and Table 5 | Design parameters. |
 
 Two categories of measurement are not archived here: the raw UDP round-trip
 samples produced by `tools/e6_rtt.py`, and the contact-force sensor logs from the

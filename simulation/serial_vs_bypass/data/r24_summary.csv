@@ -1,0 +1,10 @@
+measurement,n,min_cycles,median_cycles,max_cycles,mean_cycles,sd_cycles,min_us,median_us,max_us,max_pct_of_100us,note
+A: adaptation update start->done (deployed adaptive_impedance_v2),2000,172,172.0,172,172.000,0.000,1.376,1.376,1.376,1.38,N=2000 random updates incl. dead-zone / enable=0
+"C: BYPASS forward chain, on-chip op18 counter (deployed udp_fk_cmd)",1000,549,549.0,549,549.000,0.000,4.392,4.392,4.392,4.39,command latch -> iq written
+C: adaptation op15 start->done inside deployed udp_fk_cmd,1000,172,172.0,172,172.000,0.000,1.376,1.376,1.376,1.38,off the critical path
+C: SERIAL-equivalent forward chain = on-chip fwd + adaptation,1000,721,721.0,721,721.000,0.000,5.768,5.768,5.768,5.77,every beat carries an update
+"B: wrapper BYPASS, adaptation never triggered",1000,547,547.0,547,547.000,0.000,4.376,4.376,4.376,4.38,wrapper start -> done
+"B: wrapper BYPASS, adaptation triggered concurrently",1000,547,547.0,547,547.000,0.000,4.376,4.376,4.376,4.38,wrapper start -> done
+"B: wrapper SERIAL, all beats (update on 48.4 % of beats)",1000,547,547.0,719,630.248,85.956,4.376,4.376,5.752,5.75,wrapper start -> done
+"B: wrapper SERIAL, beats WITH update",484,719,719.0,719,719.000,0.000,5.752,5.752,5.752,5.75,
+"B: wrapper SERIAL, beats WITHOUT update",516,547,547.0,547,547.000,0.000,4.376,4.376,4.376,4.38,
