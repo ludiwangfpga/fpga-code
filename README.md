@@ -63,6 +63,7 @@ Two properties the design is built around:
 | `board_test/bitstream/` | The deployed bitstream and its timing and utilization reports (build of record). |
 | `board_test/host/` | Visual Studio host program that performs the on-board verification (Parts 1-5). |
 | `board_test/data/` | Data produced by the tests: RTL dump, board console log, measured robot trajectory. See `board_test/data/README.md`. |
+| `benchmarks/cpu_longrun/` | CPU baseline: per-call latency of the bit-level-equivalent control law on a Windows host (two 10^6-call runs and three long runs of 60–120 min), with source, raw data and analysis script. See `benchmarks/cpu_longrun/README.md`. |
 
 `board_test/` deliberately keeps the three things you need for a hardware run
 side by side: the bitstream you flash, the host you build, and the data those
@@ -289,6 +290,7 @@ carrying a number.
 | `board_test/data/board_run_log_20260810.txt` | Host Parts 1-5 on the flashed bitstream | **On-board measurement.** The four numeric lines of the Part 2 demo were not archived verbatim and are marked as such in the file. |
 | `board_test/data/trajectory_measured_100Hz_60s.csv` | Host-in-the-loop run on the physical arm, 6001 rows at 100 Hz over 60 s | **Physical robot measurement.** |
 | `tools/traj_hw/traj_xdes_delta.csv` | `tools/traj_hw/gen_traj.py` | Deterministic generated command table (the reference the measured log is compared against). |
+| `benchmarks/cpu_longrun/data/` | `benchmarks/cpu_longrun/src/` on an i9-10900 / Windows 10 host, timed per call with `rdtscp` | **Host measurement.** Raw per-call samples (10^6-call runs) plus full histograms and per-event tails (long runs). |
 
 Two categories of measurement are not archived here: the raw UDP round-trip
 samples produced by `tools/e6_rtt.py`, and the contact-force sensor logs from the

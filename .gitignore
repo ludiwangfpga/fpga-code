@@ -74,3 +74,8 @@ Release/
 # ---------------------------------------------------------------------------
 __pycache__/
 *.pyc
+
+# CPU baseline (benchmarks/cpu_longrun): run logs and figures are data of record.
+!benchmarks/cpu_longrun/data/longrun/*.log
+!benchmarks/cpu_longrun/figures/*.pdf
+!benchmarks/cpu_longrun/figures/*.png
